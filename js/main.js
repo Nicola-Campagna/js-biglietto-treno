@@ -16,28 +16,29 @@ console.log(infoTicket);
 document.getElementById("infoTicket").innerHTML = infoTicket
 
 // costo biglietto = 0.21£ * km tot della tratta scelta
-const costTicket = (numberKm * 0.21);
+const costXkm = 0.21;
+const costTicket = (numberKm * costXkm.toFixed(2));
+
 
 if (agePerson < 17) {
     // costo biglietto per minori
-    const costTicket = ((numberKm * 0.21) * 20 / 100);
-    console.log(costTicket + " euro");
-    document.getElementById("costTicket").innerHTML = (costTicket + "euro");
+    const costTicket = ((numberKm * costXkm.toFixed(2)) * 20 / 100);
+    console.log(costTicket.toFixed(2) + " euro");
+    document.getElementById("costTicket").innerHTML = (costTicket.toFixed(2) + "euro");
 }
 // 
 else if (agePerson > 65) {
     // costo biglietto per over 65
-    const costTicket = ((numberKm * 0.21) * 40 / 100);
-    console.log(costTicket + " euro");
-    document.getElementById("costTicket").innerHTML = (costTicket + "euro");
+    const costTicket = ((numberKm * costXkm.toFixed(2)) * 40 / 100);
+    console.log(costTicket.toFixed(2) + " euro");
+    document.getElementById("costTicket").innerHTML = (costTicket.toFixed(2) + "euro");
 
 }
 // persone maggiorenni inferiore ai 65anni
 else {
-    console.log(costTicket + "euro")
-    document.getElementById("costTicket").innerHTML = (costTicket + "euro");
+    console.log(costTicket.toFixed(2) + " euro")
+    document.getElementById("costTicket").innerHTML = (costTicket.toFixed(2) + " euro");
 
 
 }
-
 
